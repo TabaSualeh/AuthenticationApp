@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:loginpage_figma/screens/signup.dart';
 
 import 'package:loginpage_figma/widgets/customButton.dart';
@@ -14,6 +15,12 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   @override
+  void initState() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -23,8 +30,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 _imageBox("assets/header.png"),
                 Positioned(
-                  top: 60,
-                  right: 42,
+                  top: 15,
+                  right: 35,
                   child: CustomButton(
                       btnName: "SIGN UP",
                       callback: signup,
@@ -103,18 +110,18 @@ class _LoginPageState extends State<LoginPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Image.network(
-          "https://s3-alpha-sig.figma.com/img/2d9a/1664/9bc2077bb18aa772a1ca7dc44a91d0fb?Expires=1685318400&Signature=K-dwT5yWhbnAL8B09I31Qb8AV5c08twxxyGmRatFTIGh19yYSzP5GzTWygcuydw3ZGjztCu8XgL~ve4BUy11xBf4DcwsLqLEvE93wFi6PEbhDAMrF5jJVg-pRIzG-VFZKCZ6SWkfr8byW~kGlQQZSze0JOQdx~M0fNShte9M0uvSfbxclJNDzrmwonvA72Hy0tYYFEP-Sdyz7uCyIwnavHeFC8DH9kaMrfIDpv8octpG3vtET5UpXPe8B9IYthkiYWX51g11ddhybZptkV5v65QR7FIT3Brvw5M8eXlPlehcHtTVCkcgc4q0jQLsLeEPE3sgsRRnfUwUn1MMyaFS0g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        Image.asset(
+          "assets/google.png",
           width: 40,
           height: 26,
         ),
-        Image.network(
-          "https://s3-alpha-sig.figma.com/img/f069/24c0/58e8f5ac091d5fda6b6c6223ee628208?Expires=1685318400&Signature=jrP7u2QyvCIC2-K36Cg4q6UK7h8aY~PrRhtko4oLXoB7BKICwUY1no4PQ1DXEkILKR-b0B8VpQI6-I9XlIUFU5evkQjqxiTBtjw9g18DylkQIr9J8m-mAtje4AKDYS7RsWMahWTZt5--zHx01khEtWresu-tWCK~QJYHhguTgsA0jskJu~yvOJ9xkD53isxQTL9xPeNY8QBAPCORzJPsdsMPDToxG9wuwiask-fo8raeMYuR~mblJetjYMtRXVqY5JSIkvfHnXATeShLYeXIuS2ZCKaPemU9hAoLyz~poCtrJWESly-XW2YRIgpGXy3jWQNY-9AvWGxduenEfMZMhg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        Image.asset(
+          "assets/facebook.png",
           width: 27,
           height: 26,
         ),
-        Image.network(
-          "https://cdn-icons-png.flaticon.com/512/733/733579.png",
+        Image.asset(
+          "assets/twitter.png",
           width: 26.82,
           height: 25.79,
         ),

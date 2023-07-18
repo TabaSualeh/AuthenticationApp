@@ -24,8 +24,8 @@ class _SignUpState extends State<SignUp> {
             child: Stack(children: [
               _imageBox("assets/header.png"),
               Positioned(
-                top: 60,
-                right: 42,
+                top: 15,
+                right: 35,
                 child: CustomButton(
                     btnName: "SIGN IN",
                     callback: signin,
@@ -39,7 +39,7 @@ class _SignUpState extends State<SignUp> {
           ),
           Text("NEW USER? GET STARTED NOW",
               style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff4F4F4F))),
           Container(
@@ -59,16 +59,7 @@ class _SignUpState extends State<SignUp> {
                 _showTextField(),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 2.0, top: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      _displayText("Password*", Color(0xff4F4F4F)),
-                      TextButton(
-                          onPressed: forget,
-                          child: _displayText("Forgot Password?",
-                              Color.fromARGB(255, 36, 125, 241)))
-                    ],
-                  ),
+                  child: _displayText("Password*", Color(0xff4F4F4F)),
                 ),
                 _showTextField(),
               ],
@@ -100,18 +91,18 @@ class _SignUpState extends State<SignUp> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Image.network(
-          "https://s3-alpha-sig.figma.com/img/2d9a/1664/9bc2077bb18aa772a1ca7dc44a91d0fb?Expires=1685318400&Signature=K-dwT5yWhbnAL8B09I31Qb8AV5c08twxxyGmRatFTIGh19yYSzP5GzTWygcuydw3ZGjztCu8XgL~ve4BUy11xBf4DcwsLqLEvE93wFi6PEbhDAMrF5jJVg-pRIzG-VFZKCZ6SWkfr8byW~kGlQQZSze0JOQdx~M0fNShte9M0uvSfbxclJNDzrmwonvA72Hy0tYYFEP-Sdyz7uCyIwnavHeFC8DH9kaMrfIDpv8octpG3vtET5UpXPe8B9IYthkiYWX51g11ddhybZptkV5v65QR7FIT3Brvw5M8eXlPlehcHtTVCkcgc4q0jQLsLeEPE3sgsRRnfUwUn1MMyaFS0g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        Image.asset(
+          "assets/google.png",
           width: 40,
           height: 26,
         ),
-        Image.network(
-          "https://s3-alpha-sig.figma.com/img/f069/24c0/58e8f5ac091d5fda6b6c6223ee628208?Expires=1685318400&Signature=jrP7u2QyvCIC2-K36Cg4q6UK7h8aY~PrRhtko4oLXoB7BKICwUY1no4PQ1DXEkILKR-b0B8VpQI6-I9XlIUFU5evkQjqxiTBtjw9g18DylkQIr9J8m-mAtje4AKDYS7RsWMahWTZt5--zHx01khEtWresu-tWCK~QJYHhguTgsA0jskJu~yvOJ9xkD53isxQTL9xPeNY8QBAPCORzJPsdsMPDToxG9wuwiask-fo8raeMYuR~mblJetjYMtRXVqY5JSIkvfHnXATeShLYeXIuS2ZCKaPemU9hAoLyz~poCtrJWESly-XW2YRIgpGXy3jWQNY-9AvWGxduenEfMZMhg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        Image.asset(
+          "assets/facebook.png",
           width: 27,
           height: 26,
         ),
-        Image.network(
-          "https://cdn-icons-png.flaticon.com/512/733/733579.png",
+        Image.asset(
+          "assets/twitter.png",
           width: 26.82,
           height: 25.79,
         ),

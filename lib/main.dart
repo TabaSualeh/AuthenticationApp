@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:loginpage_figma/screens/splash.dart';
 
 void main() {
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   runApp(MyApp());
 }
 
